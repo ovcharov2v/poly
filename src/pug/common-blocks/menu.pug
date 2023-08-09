@@ -1,0 +1,49 @@
+.menu
+	.container
+		.content-box
+			.menu__nav-box
+				nav.menu__nav
+					ul.menu__nav-list
+						li.menu__nav-elem
+							a.menu__nav-link(href="index.html", data-digit="1")
+								+svg("menu-arrow")(class="menu__arrow")
+								|Home
+						li.menu__nav-elem
+							a.menu__nav-link(href="about-us.html", data-digit="2")
+								+svg("menu-arrow")(class="menu__arrow")
+								|About us
+						li.menu__nav-elem
+							a.menu__nav-link(href="apartments.html", data-digit="3")
+								+svg("menu-arrow")(class="menu__arrow")
+								|Apartments
+						li.menu__nav-elem
+							a.menu__nav-link(href="blog.html", data-digit="4")
+								+svg("menu-arrow")(class="menu__arrow")
+								|Blog
+						li.menu__nav-elem
+							a.menu__nav-link(href="#", data-digit="5")
+								+svg("menu-arrow")(class="menu__arrow")
+								|Pages
+						li.menu__nav-elem
+							a.menu__nav-link(href="contact-us.html", data-digit="6")
+								+svg("menu-arrow")(class="menu__arrow")
+								|Contacts us
+				p.menu__counter 0
+					span.menu__counter-digit-list
+						span.menu__counter-digit 0
+						span.menu__counter-digit 1
+						span.menu__counter-digit 2
+						span.menu__counter-digit 3
+						span.menu__counter-digit 4
+						span.menu__counter-digit 5
+						span.menu__counter-digit 6
+	.menu__footer
+		.container
+			.content-box
+				.menu__footer-row
+					ul.menu__social
+						li.menu__social-elem
+							a.menu__social-link(href="https://instagram.com", target="_blank", rel="noreferrer") Instagram
+						li.menu__social-elem
+							a.menu__social-link(href="https://t.me", target="_blank", rel="noreferrer") telegram
+					p.menu__copyright ©2023

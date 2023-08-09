@@ -1,0 +1,96 @@
+.button {
+	@include text-16-regular;
+	position: relative;
+	display: inline-block;
+	border: 1px solid var(--color-elements);
+	color: var(--color-bg);
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	min-width: 183px;
+	transition: color $transition-default, background-color $transition-default;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: calc(100% + 2px);
+		height: calc(200% + 2px);
+		background-image: linear-gradient(to bottom, var(--color-elements) 50%, var(--color-bg) 50%);
+		transition: transform $transition-default;
+		content: "";
+	}
+
+	&:hover {
+		&::before {
+			transform: translateY(-50%);
+		}
+	}
+
+	&__text-box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 200%;
+		transition: transform $transition-default;
+
+		.button:hover & {
+			transform: translateY(-100%);
+		}
+	}
+
+	&__text {
+		display: block;
+		width: 100%;
+		height: 100%;
+		padding: 14px 32px;
+
+		&--normal {
+			color: var(--color-bg);
+		}
+
+		&--hover {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			color: var(--color-elements);
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		top: 8px;
+		left: 10px;
+		width: 10px;
+		height: 7px;
+		transform: translateX(-100px);
+		opacity: 0;
+		color: var(--color-elements);
+		transition: opacity $transition-default, transform $transition-default;
+
+
+		.button:hover & {
+			opacity: 1;
+			transform: translate(0);
+			transition-delay: 0.4s;
+		}
+	}
+
+	&__anim-box {
+		position: relative;
+		display: inline-block;
+		padding-left: 30px;
+		overflow: hidden;
+	}
+
+	&__anim-text {
+		display: inline-block;
+		transform: translateY(100%);
+		transition: transform .4s;
+
+		.button:hover & {
+			transform: translateY(0);
+		}
+	}
+}

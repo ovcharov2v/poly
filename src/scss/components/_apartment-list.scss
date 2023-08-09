@@ -1,0 +1,125 @@
+.apartment-list {
+	&--v1 {
+		padding-top: 64px;
+		padding-bottom: 49px;
+
+		@include desktop {
+			padding-top: 50px;
+			padding-bottom: 115px;
+		}
+	}
+
+	&--v2 {
+		padding-top: 64px;
+
+		@include desktop {
+			padding-top: 103px;
+			padding-bottom: 53px;
+		}
+	}
+
+	&__title {
+		.apartment-list--v1 & {
+			@include text-50-light;
+			margin-bottom: 45px;
+			text-transform: uppercase;
+
+			@include desktop {
+				@include h1-100-light;
+				margin-bottom: 50px;
+			}
+		}
+
+		.apartment-list--v2 & {
+			@include text-31-light;
+			margin-bottom: 30px;
+
+			@include desktop {
+				@include h3-40-light;
+				margin-bottom: 50px;
+			}
+		}
+	}
+
+	&__filters {
+		margin-bottom: 50px;
+
+		&--desktop {
+			display: none;
+
+			@include desktop {
+				display: block;
+			}
+		}
+
+		&--mobile {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+
+			@include desktop {
+				display: none;
+			}
+		}
+	}
+
+	&__filter-row {
+		display: flex;
+		align-items: center;
+
+		&:not(:last-child) {
+			margin-bottom: 43px;
+		}
+	}
+
+	&__filter-label {
+		@include text-25-light;
+		min-width: 146px;
+		margin-right: 10px;
+	}
+
+	&__group {
+		display: flex;
+
+		&--type {
+			gap: 16px;
+		}
+
+		&--flor {
+			gap: 10px;
+		}
+	}
+
+	&__dropdown {
+		width: 100%;
+		margin-left: auto;
+
+		@include desktop {
+			max-width: 250px;
+		}
+	}
+
+	&__grid {
+		display: grid;
+		grid-template: auto / 100%;
+		grid-row-gap: 30px;
+		margin-bottom: 50px;
+
+		@include desktop {
+			grid-row-gap: 20px;
+		}
+	}
+
+	&__button-row {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__button {
+		width: 100%;
+
+		@include desktop {
+			width: unset;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.options-group {
+	display: flex;
+	gap: 9px;
+
+	&__item {
+	}
+
+	&__option {
+		display: none;
+	}
+
+	&__text {
+		@include text-16-regular;
+		white-space: nowrap;
+		display: block;
+		padding: 15px 21px;
+		background-color: $color-beige;
+		user-select: none;
+		transition: background-color $transition-default, color $transition-default;
+
+		.options-group__item--text & {
+			padding-left: 44px;
+			padding-right: 44px;
+		}
+
+		.options-group__item--filter & {
+			@include text-20-light;
+			padding: 10px 30px;
+		}
+
+		.options-group__option:checked + & {
+			background-color: $color-beige2;
+			color: $color-white;
+		}
+	}
+}

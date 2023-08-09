@@ -1,0 +1,30 @@
+.section-slider {
+	&--v1 {
+		padding-top: 149px;
+		padding-bottom: 73px;
+
+		@include desktop {
+			padding-top: 199px;
+			padding-bottom: 73px;
+		}
+	}
+
+	&--v2 {
+		padding-top: 61px;
+		padding-bottom: 70px;
+
+		@include desktop {
+			padding-top: 96px;
+			padding-bottom: 70px;
+		}
+	}
+
+	&--v3 {
+		padding-top: 56px;
+		padding-bottom: 52px;
+
+		@include desktop {
+			padding-top: 95px;
+		}
+	}
+}

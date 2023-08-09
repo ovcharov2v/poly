@@ -1,0 +1,103 @@
+.contacts-us {
+	padding-top: 60px;
+
+	@include desktop {
+		padding-top: 46px;
+	}
+
+	&__grid {
+		display: grid;
+		grid-row-gap: 50px;
+
+		@include desktop {
+			display: grid;
+			grid-template: auto / 1fr 1.74fr;
+			grid-row-gap: 50px;
+		}
+	}
+
+	&__col-content {
+		order: -1;
+		display: flex;
+		flex-direction: column-reverse;
+
+		@include desktop {
+			flex-direction: column;
+			text-align: right;
+			order:  unset;
+		}
+	}
+
+	&__img {
+		width: 100%;
+	}
+
+	&__top-box {
+		display: flex;
+		flex-direction: column;
+
+		@include desktop {
+			align-items: flex-end;
+			margin-bottom: 120px;
+		}
+	}
+
+	&__tel-link {
+		@include text-20-light;
+		margin-bottom: 15px;
+
+		@include desktop {
+			@include text-31-light;
+			margin-bottom: 25px;
+		}
+	}
+
+	&__mail-link {
+		@include text-20-light;
+		margin-bottom: 15px;
+
+		@include desktop {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__address {
+		@include text-20-light;
+	}
+
+	&__bottom-box {
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid var(--color-elements);
+
+		@include desktop {
+			margin-top: auto;
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+	}
+
+	&__subtitle {
+		@include text-20-light;
+		margin-bottom: 10px;
+
+		@include desktop {
+			display: none;
+		}
+	}
+
+	&__title {
+		@include text-50-light;
+		text-transform: uppercase;
+
+		@include desktop {
+			font-size: 115px;
+			line-height: .9;
+		}
+
+		@media (min-width: 1300px) {
+			font-size: 214px;
+		}
+	}
+}

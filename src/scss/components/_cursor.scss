@@ -1,0 +1,99 @@
+*[data-cursor] {
+	cursor: none
+}
+.cursor {
+	position: absolute;
+	z-index: 999999;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	font-size: 16px;
+	line-height: 1;
+	letter-spacing: .04em;
+	text-transform: uppercase;
+	border: 1px solid var(--color-elements);
+	user-select: none;
+
+	@media (hover: none) {
+		display: none !important;
+	}
+
+	&--active {
+		display: flex;
+	}
+
+	&--empty {
+		width: 55px;
+		height: 55px;
+		border-color: $color-gray-medium;
+	}
+
+	&--open {
+		border-color: $color-gray-medium;
+		color: $color-gray-medium;
+	}
+
+	&--close,
+	&--prev,
+	&--next{
+		border-color: $color-white;
+		background-color: $color-white;
+		color: $color-black;
+	}
+
+	&--drag-black {
+		border-color: $color-black;
+		color: $color-black;
+
+		&::before, &::after {
+			position: absolute;
+			top: calc(50% - 6px);
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 6px 6px 6px 0;
+			border-color: transparent $color-black transparent transparent;
+			content: "";
+		}
+
+		&::before {
+			left: -16px;
+		}
+
+		&::after {
+			right: -16px;
+			transform: scaleX(-1);
+		}
+	}
+
+	&--drag-white {
+		border-color: $color-white;
+		color: $color-white;
+
+		&::before, &::after {
+			position: absolute;
+			top: calc(50% - 6px);
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 6px 6px 6px 0;
+			opacity: .5;
+			border-color: transparent $color-white transparent transparent;
+			content: "";
+		}
+
+		&::before {
+			left: -16px;
+		}
+
+		&::after {
+			right: -16px;
+			transform: scaleX(-1);
+		}
+	}
+}

@@ -1,0 +1,154 @@
+.text-and-image {
+	&--v1 {
+		padding-top: 100px;
+		padding-bottom: 40px;
+
+		@include desktop {
+			padding-bottom: 100px;
+		}
+	}
+
+	&--v2 {
+		padding-top: 78px;
+		padding-bottom: 100px;
+
+		@include desktop {
+			padding-top: 100px;
+		}
+	}
+
+	&--v2-apartment {
+		padding-top: 100px;
+		padding-bottom: 140px;
+
+		@include desktop {
+			padding-bottom: 185px;
+		}
+	}
+
+	&--v3 {
+		padding-top: 100px;
+		padding-bottom: 47px;
+
+		@include desktop {
+			padding-bottom: 100px;
+		}
+	}
+
+	&--v4 {
+		padding-top: 100px;
+		padding-bottom: 54px;
+
+		@include desktop {
+			padding-bottom: 100px;
+		}
+	}
+
+	&__grid {
+		display: flex;
+		flex-direction: column;
+
+		@include desktop {
+			display: grid;
+		}
+
+		.text-and-image--v1 & {
+			@include desktop {
+				grid-template: auto / 2.17fr 1fr;
+				grid-column-gap: 60px;
+			}
+		}
+
+		.text-and-image--v3 & {
+			@include desktop {
+				grid-template: auto / 2.17fr 1fr;
+				grid-column-gap: 60px;
+			}
+		}
+
+		.text-and-image--v4 & {
+			flex-direction: column-reverse;
+
+			@include desktop {
+				grid-template: auto / 1fr 1.62fr;
+				grid-column-gap: 100px;
+			}
+		}
+
+		&--top {
+			.text-and-image--v2 & {
+				grid-template: auto / 100%;
+				grid-column-gap: 100px;
+				max-width: 1077px;
+				margin-bottom: 41px;
+
+				@include desktop {
+					grid-template: auto / 1fr 1.33fr;
+					grid-column-gap: 100px;
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&--bottom {
+			.text-and-image--v2 & {
+				display: flex;
+				flex-direction: column-reverse;
+
+				@include desktop {
+					display: grid;
+					grid-template: auto / 1fr 1.62fr;
+					grid-column-gap: 100px;
+				}
+			}
+		}
+	}
+
+	&__img {
+		display: inline-block;
+		margin-bottom: 50px;
+
+		@include desktop {
+			margin-bottom: 0;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	}
+
+	&__title {
+		@include text-31-light;
+		margin-bottom: 26px;
+
+		@include desktop {
+			@include h3-40-light;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__text {
+		@include text-16-light;
+		margin-bottom: 10px;
+	}
+
+	&__button {
+		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 10px;
+
+		@include desktop {
+			max-width: 183px;
+		}
+	}
+
+	&__note {
+		margin-bottom: 4px;
+		font-size: 12px;
+		line-height: 1;
+		color: $color-gray-medium;
+	}
+}

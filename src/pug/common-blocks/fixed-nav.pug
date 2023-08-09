@@ -1,0 +1,8 @@
+mixin fixedNav()
+	.fixed-nav(class=(threeNavLines == true? 'fixed-nav--three-lines' : ''))
+		button.fixed-nav__button.js-show-menu
+			.fixed-nav__button-line.fixed-nav__button-line--n1
+			if threeNavLines == true
+				.fixed-nav__button-line.fixed-nav__button-line--n2
+			.fixed-nav__button-line.fixed-nav__button-line--n3
+		a.fixed-nav__email(href="mailto:gemstone@gem.com") gemstone@gem.com

@@ -1,0 +1,8 @@
+mixin header()
+	header.header(class=isHeaderFixed?'header--permanent-fixed':'')
+		.container.header__container
+			a.header__home-link(href="index.html") ge
+				span.header__home-link-part mstone
+			+button("Get an offer", "header__button", "#")
+			button.header__menu-button.js-show-menu(aria-label="Open menu")
+				span.header__menu-button-text Close

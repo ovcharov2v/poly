@@ -1,0 +1,49 @@
+.map-section {
+	padding-top: 96px;
+	padding-bottom: 50px;
+
+	@include desktop {
+		padding-bottom: 100px;
+	}
+
+	&__map-box {
+		margin-bottom: 50px;
+		height: 250px;
+
+		@include desktop {
+			height: 620px;
+		}
+	}
+
+	&__row {
+		@include desktop {
+			display: grid;
+			grid-template: auto / repeat(2, minmax(0,43%));
+		}
+	}
+
+	&__col {
+	}
+
+	&__name {
+		@include text-31-light;
+
+		@include desktop {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__text {
+		@include text-20-light;
+		max-width: 580px;
+	}
+
+	&__small-text {
+		@include text-16-light;
+		margin-bottom: 30px;
+
+		@include desktop {
+			margin-bottom: 0;
+		}
+	}
+}

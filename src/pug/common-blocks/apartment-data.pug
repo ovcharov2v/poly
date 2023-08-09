@@ -1,0 +1,17 @@
+mixin apartmentData(className)
+	// Apartment data
+	section.apartment-data(class=className)
+		.apartment-data__col.apartment-data__col--img
+			+picture("plan-small", "apartment-data__img", "png")
+		.apartment-data__col.apartment-data__col--info
+			h3.apartment-data__title 1 bedroom, 45M
+				sup 2
+			p.apartment-data__text building 2, floor 9
+				br
+				|windows northeast
+		.apartment-data__col.apartment-data__col--note
+			p.apartment-data__bold-text free
+			p.apartment-data__text finishing white box
+			p.apartment-data__text handover January 2023
+		.apartment-data__col.apartment-data__col--button
+			+button("See more", "apartment-data__link", "#")

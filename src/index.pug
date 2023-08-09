@@ -1,0 +1,308 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Main page"
+
+block content
+	// Section Hero Main
+	section.container.hero-main
+		.content-box
+			h1.hero-main__title.animated-header.animation
+				span.animated-header__box
+					span.animated-header__elem Gemstone
+			.hero-main__content-box
+				.hero-main__content-col
+					h2.hero-main__description.animation.fade Tranquility and comfort in the heart of the city
+					address.hero-main__address.animation.fade Sanayi, Orpak Sk. No:1, 34165 Güngören/İstanbul, Türkiye
+				.hero-main__content-col
+					p.hero-main__text.animation.fade The concept was inspired by the original architecture of the House itself: the geometric elements of the main facade, which attract attention, the bright and spacious rooms with five-meter ceilings, immediately refer to the aesthetics of American Art Deco.
+					p.hero-main__text.animation.fade His influence quickly swept America in the early 19th century, shaping the way of life of that period, which is characterized by rapid economic growth, the development of technology, mechanical engineering and the construction of iconic famous arch-structures, as well as the development of cinematography.
+					p.hero-main__text.animation.fade Welcome to Gemstone Clubhouse...
+			+button("Get an offer", "hero-main__button animation fade", "#")
+
+	// Section Banner
+	section.banner
+		+picture("banner1", className="banner__img scaled-block animation")
+
+	// Section Estate description
+	section.estate-description.container
+		.content-box
+			h2.estate-description__title.animated-header.animation
+				span.animated-header__box
+					span.animated-header__elem IV quarter 2023 — issuance of keys
+			.estate-description__grid
+				.estate-description__grid-elem
+					+animatedLine(class="animated-line--gray estate-description__line")
+					p.estate-description__value.animation.fade 90
+						|
+						|
+						span.estate-description__small-text apartments
+				.estate-description__grid-elem
+					p.estate-description__value.animation.fade 3.5
+						|
+						|
+						span.estate-description__small-text ceiling
+				.estate-description__grid-elem
+					+animatedLine(class="animated-line--gray estate-description__line")
+					p.estate-description__value.animation.fade 5
+						|
+						|
+						span.estate-description__small-text unique penthouses
+				.estate-description__grid-elem
+					p.estate-description__value.animation.fade 5.5
+						|
+						|
+						span.estate-description__small-text ceiling
+				.estate-description__grid-elem
+					+animatedLine(class="animated-line--gray estate-description__line")
+					p.estate-description__value.animation.fade 24/7
+					span.estate-description__small-text.animation.fade 2 lobby areas
+				.estate-description__grid-elem
+					p.estate-description__text.animation.fade Private terrace
+					span.estate-description__small-text.animation.fade 2 in 1 - green terrace in summer, skating rink in winter
+				.estate-description__grid-elem.estate-description__grid-elem--pl
+					+animatedLine(class="animated-line--gray estate-description__line estate-description__line--mobile")
+					p.estate-description__text.animation.fade Everything for comfort
+					span.estate-description__small-text.animation.fade Children's area, shop, fitness, parking
+				.estate-description__grid-elem.estate-description__grid-elem--m2.estate-description__grid-elem--pl
+					+animatedLine(class="animated-line--gray estate-description__line estate-description__line--mobile")
+					img.estate-description__img.scaled-block.animation(src="images/m2.svg", alt)
+					p.estate-description__small-text.animation.fade Wide choice: from 35 to 300 meters with and without trim
+
+	// Section Map section
+	section.map-section.container
+		.content-box
+			.map-section__map-box.scaled-block.animation
+				iframe(width='100%', height='100%', src='https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed', frameborder='0', scrolling='no', marginheight='0', marginwidth='0')
+			.map-section__row
+				.map-section__col.animation.fade
+					p.map-section__name District Orpak
+					p.map-section__small-text Orpak Sk. No:1
+				.map-section__col.animation.fade
+					p.map-section__text London - City, World Trade Center, legendary streets, famous theaters, museums, best restaurants - the center of London - the center of attraction for success, inspiration and strength.
+
+	// Section Text and image
+	section.text-and-image.text-and-image--v1.container
+		.content-box
+			.text-and-image__grid
+				+picture("img1", className="text-and-image__img scaled-block animation")
+				.text-and-image__content
+					h2.text-and-image__title.animation.fade Unique architecture
+					p.text-and-image__text.animation.fade The main façade of the building is made in neoclassical style with protruding details and a large number of windows. This is a well-defined composition of polished granite with rustic elements, large-format porcelain stoneware and custom-made decorative elements.
+	// Section Faq
+	.section-faq.section-faq--v1.container
+		.content-box
+			ul.faq.section-faq__faq
+				// Faq elem
+				li.faq__elem
+					+animatedLine(class="faq__elem-line")
+					.faq__title-box
+						p.faq__title Parking
+						button.faq__btn(aria-label="Expand")
+					.faq__content
+						p.faq__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam asperiores assumenda dicta doloremque eos illo ipsa ipsum itaque, minima perferendis quas quia repellendus similique ut vel, vitae! Aperiam, officiis.
+						p.faq__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam asperiores assumenda dicta doloremque eos illo ipsa ipsum itaque, minima perferendis quas quia repellendus similique ut vel, vitae! Aperiam, officiis.
+				// Faq elem
+				li.faq__elem
+					+animatedLine(class="faq__elem-line")
+					.faq__title-box
+						p.faq__title Safety system
+						button.faq__btn(aria-label="Expand")
+					.faq__content
+						p.faq__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam asperiores assumenda dicta doloremque eos illo ipsa ipsum itaque, minima perferendis quas quia repellendus similique ut vel, vitae! Aperiam, officiis.
+				// Faq elem
+				li.faq__elem
+					+animatedLine(class="faq__elem-line")
+					.faq__title-box
+						p.faq__title Elevators
+						button.faq__btn(aria-label="Expand")
+					.faq__content
+						p.faq__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam asperiores assumenda dicta doloremque eos illo ipsa ipsum itaque, minima perferendis quas quia repellendus similique ut vel, vitae! Aperiam, officiis.
+				// Faq elem
+				li.faq__elem
+					+animatedLine(class="faq__elem-line")
+					.faq__title-box
+						p.faq__title Territory
+						button.faq__btn(aria-label="Expand")
+					.faq__content
+						p.faq__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam asperiores assumenda dicta doloremque eos illo ipsa ipsum itaque, minima perferendis quas quia repellendus similique ut vel, vitae! Aperiam, officiis.
+				// Faq elem
+				li.faq__elem
+					+animatedLine(class="faq__elem-line")
+					.faq__title-box
+						p.faq__title Fire alarm
+						button.faq__btn(aria-label="Expand")
+					.faq__content
+						p.faq__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam asperiores assumenda dicta doloremque eos illo ipsa ipsum itaque, minima perferendis quas quia repellendus similique ut vel, vitae! Aperiam, officiis.
+				// Faq elem
+				li.faq__elem
+					+animatedLine(class="faq__elem-line")
+					.faq__title-box
+						p.faq__title Window
+						button.faq__btn(aria-label="Expand")
+					.faq__content
+						p.faq__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam asperiores assumenda dicta doloremque eos illo ipsa ipsum itaque, minima perferendis quas quia repellendus similique ut vel, vitae! Aperiam, officiis.
+				// Faq elem
+				li.faq__elem
+					+animatedLine(class="faq__elem-line")
+					.faq__title-box
+						p.faq__title Conditioning
+						button.faq__btn(aria-label="Expand")
+					.faq__content
+						p.faq__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam asperiores assumenda dicta doloremque eos illo ipsa ipsum itaque, minima perferendis quas quia repellendus similique ut vel, vitae! Aperiam, officiis.
+				// Faq elem
+				li.faq__elem
+					+animatedLine(class="faq__elem-line")
+					.faq__title-box
+						p.faq__title Ventilation
+						button.faq__btn(aria-label="Expand")
+					.faq__content
+						p.faq__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam asperiores assumenda dicta doloremque eos illo ipsa ipsum itaque, minima perferendis quas quia repellendus similique ut vel, vitae! Aperiam, officiis.
+			+animatedLine()
+
+	// Section Slider
+	section.section-slider.section-slider--v1.container
+		.content-box
+			.simple-slider
+				.swiper
+					.swiper-wrapper(data-cursor="drag-white")
+						.swiper-slide.simple-slider__slide.scaled-block.animation
+							+picture("img2", "simple-slider__img simple-slider__img--full-width")
+						.swiper-slide.simple-slider__slide
+							+picture("img2", "simple-slider__img simple-slider__img--full-width")
+						.swiper-slide.simple-slider__slide
+							+picture("img2", "simple-slider__img simple-slider__img--full-width")
+						.swiper-slide.simple-slider__slide
+							+picture("img2", "simple-slider__img simple-slider__img--full-width")
+						.swiper-slide.simple-slider__slide
+							+picture("img2", "simple-slider__img simple-slider__img--full-width")
+				.simple-slider__nav-box.animation.fade
+					.simple-slider__pagination
+					p.simple-slider__text Facade from Orpak street
+				.simple-slider__progress.animation.fade
+					.simple-slider__progress-value
+
+	// Section Text and image
+	section.text-and-image.text-and-image--v2.container
+		.content-box
+			.text-and-image__grid.text-and-image__grid--top
+				+picture("img3", className="text-and-image__img scaled-block animation")(data-cursor="open", data-gallery="gallery1")
+				.text-and-image__content
+					h2.text-and-image__title.animation.fade Comfort zone
+					p.text-and-image__text.animation.fade The level of comfort often determines the standard of living. Therefore, we have thought of every detail. A journey into the world of impeccable taste begins with the lobby: the walls are decorated with natural stone, mirrored decorative panels, made according to the author's design.
+					p.text-and-image__text.animation.fade An open eco-terrace in the eastern part of the house, quiet and protected from city noise, for those who prefer to drink a cup of coffee at dawn in the summer under the first rays of the sun, or those who decide to soak up the sun by noon. Your evening will fly by with cozy conversations in the fresh air, and in winter the terrace will turn into a private skating rink for residents and their guests.
+		.content-box
+			.text-and-image__grid.text-and-image__grid--bottom
+				.text-and-image__content
+					p.text-and-image__text.animation.fade The House has its own fitness area, on the ground floor, for the services of residents and their guests: a cafe and a grocery store, a pharmacy, dry cleaning, a beauty salon and a medical center.
+					p.text-and-image__text.animation.fade In the northern part of the house, for small residents, there is a well-equipped playground for entertainment.
+				+picture("img4", className="text-and-image__img scaled-block animation")
+
+	// Section Slider
+	section.section-slider.section-slider--v2.container
+		.content-box
+			.simple-slider
+				.swiper
+					.swiper-wrapper(data-cursor="drag-white")
+						.swiper-slide.simple-slider__slide
+							+picture("img8", "simple-slider__img simple-slider__img--full-width scaled-block animation")
+						.swiper-slide.simple-slider__slide
+							+picture("img8", "simple-slider__img simple-slider__img--full-width")
+				.simple-slider__nav-box.animation.fade
+					.simple-slider__pagination
+					p.simple-slider__text Facade from Orpak street
+				.simple-slider__progress.animation.fade
+					.simple-slider__progress-value
+
+	// Section Text and image
+	section.text-and-image.text-and-image--v3.container
+		.content-box
+			.text-and-image__grid
+				+picture("img5", className="text-and-image__img scaled-block animation")
+				.text-and-image__content
+					p.text-and-image__note.animation.fade price on request
+					h2.text-and-image__title.animation.fade Apartments
+					p.text-and-image__text.animation.fade The concept was inspired by the original architecture of the House itself: the geometric elements of the front facade, which attract attention, bright and spacious rooms with
+					+button("Get an offer", "text-and-image__button animation fade", "#")
+
+	// Section Text and image
+	section.text-and-image.text-and-image--v4.container
+		.content-box
+			.text-and-image__grid
+				.text-and-image__content
+					p.text-and-image__note.animation.fade price on request
+					h2.text-and-image__title.animation.fade Penthouses
+					p.text-and-image__text.animation.fade The concept was inspired by the original architecture of the House itself: the geometric elements of the front facade, which attract attention, bright and spacious rooms with
+					+button("Get an offer", "text-and-image__button animation fade", "#")
+				+picture("img6", className="text-and-image__img scaled-block animation")
+
+	// Section Apartment plan
+	section.apartment-plan.container
+		.content-box
+			.apartment-plan__top-box
+				h2.apartment-plan__title.animation.fade Selection of apartments
+				.apartment-plan__text-wrap
+					p.apartment-plan__text.animation.fade “Gemstone” has a variety of layouts, from studios to spacious apartments for large families. You can choose the option with a dressing room, with a kitchen-living room and two bathrooms. All apartments are rented with a finished finish - you can move in immediately after receiving the keys.
+			.apartment-plan__slider-box
+				+button("Get an offer", "apartment-plan__button apartment-plan__button--mobile animation fade", "#")
+				.apartment-plan__slider.simple-slider
+					.swiper
+						.swiper-wrapper
+							.swiper-slide.simple-slider__slide.simple-slider__slide--white.scaled-block.animation
+								+picture("plan1", "simple-slider__slide-img", "png")
+							.swiper-slide.simple-slider__slide.simple-slider__slide--white
+								+picture("plan1", "simple-slider__slide-img", "png")
+					.simple-slider__nav-box.simple-slider__nav-box--center
+						.simple-slider__pagination
+					.simple-slider__progress
+						.simple-slider__progress-value
+				.apartment-plan__nav-row.animation.fade
+					.options-group
+						label.options-group__item.options-group__item--text
+							input.options-group__option(type="checkbox")
+							span.options-group__text Studio
+						label.options-group__item
+							input.options-group__option(type="checkbox")
+							span.options-group__text 1
+						label.options-group__item
+							input.options-group__option(type="checkbox", checked)
+							span.options-group__text 2
+						label.options-group__item
+							input.options-group__option(type="checkbox", checked)
+							span.options-group__text 3
+					+button("Get an offer", "apartment-plan__button apartment-plan__button--desktop animation fade", "#")
+
+	// Section Partners
+	section.partners.container
+		.content-box
+			h2.partners__title.animation.fade Project partners
+			.partners__slider.swiper
+				.partners__grid.swiper-wrapper
+					.partners__elem.swiper-slide.scaled-block.animation
+						+picture("logo1", "partners__img", baseExt="png")
+					.partners__elem.swiper-slide.scaled-block.animation
+						+picture("logo2", "partners__img", baseExt="png")
+					.partners__elem.swiper-slide.scaled-block.animation
+						+picture("logo3", "partners__img", baseExt="png")
+					.partners__elem.swiper-slide.scaled-block.animation
+						+picture("logo4", "partners__img", baseExt="png")
+					.partners__elem.swiper-slide.scaled-block.animation
+						+picture("logo5", "partners__img", baseExt="png")
+
+	+contactsForm()
+
+	// Gallery example
+	.gallery#gallery1
+		.swiper.gallery__slider(data-cursor="close")
+			.swiper-wrapper
+				.swiper-slide.gallery__slide
+					+picture("gallery-photo1", "gallery__photo")
+				.swiper-slide.gallery__slide
+					+picture("gallery-photo1", "gallery__photo")
+				.swiper-slide.gallery__slide
+					+picture("gallery-photo1", "gallery__photo")
+			button.gallery__button.gallery__button--prev(aria-label="Previous", data-cursor="prev")
+			button.gallery__button.gallery__button--next(aria-label="Next", data-cursor="next")

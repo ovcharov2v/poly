@@ -1,0 +1,104 @@
+// Mixins
+
+@mixin h1-200-light {
+	font-size: 200px;
+	line-height: 200px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+@mixin h1-100-light {
+	/* H1- 100 легкий */
+	font-weight: 300;
+	font-size: 100px;
+	line-height: 100px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+@mixin h2-70-light {
+	/* H2-70 легкий */
+	font-weight: 300;
+	font-size: 70px;
+	line-height: 88px;
+	letter-spacing: 0.04em;
+}
+
+@mixin text-50-light{
+	/* 50 лайт */
+	font-weight: 300;
+	font-size: 50px;
+	line-height: 63px;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+@mixin h3-40-light {
+	/* H3- 40 легкий */
+	font-weight: 300;
+	font-size: 40px;
+	line-height: 50px;
+	letter-spacing: 0.02em;
+}
+
+@mixin text-31-regular {
+	/* T- 31 регулярный */
+	font-weight: 400;
+	font-size: 31px;
+	line-height: 39px;
+	letter-spacing: 0.04em;
+}
+
+@mixin text-31-light {
+	/* Т- 31 легкий */
+	font-weight: 300;
+	font-size: 31px;
+	line-height: 39px;
+	letter-spacing: 0.04em;
+}
+
+@mixin text-25-light{
+	/* Т- 25 лайт-4 */
+	font-weight: 300;
+	font-size: 25px;
+	line-height: 30px;
+	letter-spacing: 0.04em;
+}
+
+@mixin text-20-light{
+	/* Т - 20 легкий */
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 0.02em;
+}
+
+@mixin text-16-regular {
+	/* T-регулярный -16-4 */
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0.04em;
+}
+
+@mixin text-16-light {
+	/* T-легкий-16-4-150 */
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.02em;
+}
+
+body {
+	font-family: $font-primary;
+}
+
+input, button, textarea {
+	font-family: inherit;
+}
+
+sup {
+	display: inline-block;
+	font-size: .5em;
+	transform: translateY(-.8em);
+}

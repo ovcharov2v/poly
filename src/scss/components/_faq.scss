@@ -1,0 +1,98 @@
+.faq {
+	&__elem {
+		position: relative;
+	}
+
+	&__elem-line {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+
+	&__title-box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 19px 0;
+
+		@include desktop {
+			padding: 30px 0;
+		}
+	}
+
+	&__title {
+		font-size: 20px;
+		line-height: 1.5;
+		font-weight: 300;
+		letter-spacing: .02em;
+
+		@include desktop {
+			font-family: $font-secondary;
+			font-size: 25px;
+			letter-spacing: .03em;
+		}
+	}
+
+	&__btn {
+		flex-shrink: 0;
+		position: relative;
+		margin-left: 16px;
+		width: 42px;
+		height: 42px;
+		transform: translateX(6px);
+
+		&::before,
+		&::after {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 20px;
+			border-bottom: 1px solid var(--color-elements);
+			content: "";
+			transition: transform $transition-default;
+
+			@include desktop {
+				width: 30px;
+			}
+		}
+
+		&::before {
+			transform: translate(-50%, -50%);
+		}
+
+		&::after {
+			transform: translate(-50%, -50%) rotate(90deg);
+		}
+
+		.faq__elem--active & {
+			&::before {
+				transform: translate(-50%, -50%) rotate(-45deg);
+			}
+
+			&::after {
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+		}
+	}
+
+	&__content {
+		max-height: 0;
+		transition: max-height .6s;
+		overflow: hidden;
+
+		& > *:last-child {
+			margin-bottom: 40px;
+		}
+
+		.faq__elem--active & {
+			max-height: 999px;
+			transition: max-height .9s;
+		}
+	}
+
+	&__text {
+		@include text-16-light;
+		margin-bottom: 10px;
+	}
+}

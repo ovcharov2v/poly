@@ -1,0 +1,81 @@
+.apartment-plan {
+	padding-top: 89px;
+	padding-bottom: 100px;
+
+	&__top-box {
+		display: grid;
+		grid-template: auto / 100%;
+		margin-bottom: 50px;
+
+		@include desktop {
+			grid-template: auto / minmax(0,1fr) minmax(0, 1.45fr);
+			grid-column-gap: 52px;
+		}
+	}
+
+	&__title {
+		@include text-31-light;
+		margin-bottom: 30px;
+
+		@include desktop {
+			@include h3-40-light;
+			margin-bottom: 0;
+		}
+	}
+
+	&__text {
+		@include text-16-light;
+		max-width: 556px;
+	}
+
+	&__slider-box {
+		display: flex;
+		flex-direction: column-reverse;
+
+		@include desktop {
+			display: block;
+			padding: 50px;
+			background-color: #F8F8F8;
+		}
+	}
+
+	&__slider {
+		margin-bottom: 18px;
+		padding: 15px 15px 30px;
+		background-color: #F8F8F8;
+
+		@include desktop {
+			padding: 0;
+			background-color: unset;
+		}
+	}
+
+	&__nav-row {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 28px;
+
+		@include desktop {
+			margin-bottom: 0;
+		}
+	}
+
+	&__button {
+		&--desktop {
+			display: none;
+
+			@include desktop {
+				display: inline-flex;
+			}
+		}
+
+		&--mobile {
+			width: 100%;
+			margin-top: 12px;
+
+			@include desktop {
+				display: none;
+			}
+		}
+	}
+}

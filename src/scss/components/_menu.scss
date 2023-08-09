@@ -1,0 +1,171 @@
+.menu {
+	display: none;
+	position: fixed;
+	z-index: 777;
+	top: 0;
+	left: 0;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	padding-top: 78px;
+	background-color: var(--color-bg);
+	transform: translateX(100%);
+	transition: transform .3s;
+
+	&--active {
+		display: flex;
+	}
+
+	&--animate {
+		transform: translateX(0);
+	}
+
+	&__container {
+		position: relative;
+	}
+
+	&__nav-box {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		height: calc(100vh - 162px);
+		overflow-x: hidden;
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			width: 0;
+		}
+
+		@include desktop {
+			flex-direction: row;
+			height: unset;
+			overflow-x: unset;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		flex-direction: column;
+
+
+		@include desktop {
+			align-items: flex-start;height: calc(100vh - 162px);
+			overflow-x: hidden;
+			scrollbar-width: none;
+
+			&::-webkit-scrollbar {
+				width: 0;
+			}
+		}
+	}
+
+	&__nav-list {
+		margin: auto;
+
+		@include desktop {
+			margin: auto 0;
+		}
+	}
+
+	&__nav-elem {
+		margin-bottom: 20px;
+	}
+
+	&__nav-link {
+		@include text-50-light;
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		transition: padding $transition-default;
+
+		@include desktop() {
+			@include h1-100-light;
+		}
+
+		&:hover {
+			padding-left: 97px;
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(-100%, -50%);
+		width: 35px;
+		height: 29px;
+		margin-right: 36px;
+		transition: transform $transition-default;
+
+		@include desktop {
+			width: 61px;
+			height: 50px;
+		}
+
+		.menu__nav-link:hover & {
+			transform: translate(0, -50%);
+		}
+	}
+
+	&__counter {
+		display: none;
+		position: relative;
+		margin-left: auto;
+		padding-right: 100px;
+		font-size: 100px;
+		line-height: 1;
+		font-weight: 300;
+		overflow: hidden;
+
+		@include desktop {
+			align-self: flex-end;
+			display: block;
+			margin-bottom: 0;
+			font-size: 213px;
+		}
+	}
+
+	&__counter-digit-list {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		transition: transform .4s;
+	}
+
+	&__counter-digit {
+	 }
+
+	&__footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 30px 0;
+		font-size: 16px;
+		line-height: 1.5;
+		font-weight: 300;
+		letter-spacing: .02em;
+	}
+
+	&__footer-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__social {
+		display: flex;
+		gap: 20px;
+
+		@include desktop {
+			display: none;
+		}
+	}
+
+	&__copyright {
+		margin-left: auto;
+	}
+}

@@ -1,0 +1,61 @@
+.hero-main {
+	padding-top: 58px;
+	padding-bottom: 53px;
+
+	@include desktop {
+		padding-top: 78px;
+		padding-bottom: 88px;
+	}
+
+	&__title {
+		@include text-50-light;
+		margin-bottom: 30px;
+
+		@include desktop {
+			@include h1-200-light;
+			margin-bottom: 76px;
+		}
+	}
+
+	&__content-box {
+		display: grid;
+		grid-template: auto / 100%;
+		grid-gap: 30px 50px;
+
+		@include desktop {
+			grid-template: auto / 1fr 1.18fr;
+			max-width: 1075px;
+		}
+	}
+
+	&__content-col {
+	}
+
+	&__description {
+		@include text-31-light;
+		margin-bottom: 16px;
+
+		@include desktop {
+			@include h3-40-light;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__address {
+		@include text-16-light;
+	}
+
+	&__text {
+		@include text-16-light;
+		margin-bottom: 10px;
+	}
+
+	&__button {
+		width: 100%;
+		margin-top: 20px;
+
+		@include desktop {
+			display: none;
+		}
+	}
+}

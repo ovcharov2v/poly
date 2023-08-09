@@ -1,0 +1,19 @@
+mixin footer()
+	footer.footer.container(class=noFooterLine?"footer--no-line":"")
+		if noFooterText !== true
+			.content-box.footer__top-row
+				p.footer__text.animation.fade Get in touch
+				h2.footer__title.animated-header.animation
+					span.animated-header__box
+						span.animated-header__elem Contact
+		.content-box.footer__bottom-row
+			if noFooterLine !== true
+				+animatedLine(class="footer__line")
+			.footer__wrap
+				a.footer__email(href="mailto:gemstone@gem.com") gemstone@gem.com
+				ul.footer__social
+					li.footer__social-elem
+						a.footer__social-link.animation.fade(href="https://instagram.com", target="_blank", rel="noreferrer") Instagram
+					li.footer__social-elem
+						a.footer__social-link.animation.fade(href="https://t.me", target="_blank", rel="noreferrer") telegram
+			p.footer__year ©2023

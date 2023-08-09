@@ -1,0 +1,52 @@
+.animation {
+	&.scaled-block {
+		transform: scale(1.2);
+		transition: transform .6s;
+
+		&.animation--complete {
+			transform: scale(1);
+		}
+	}
+
+	&.animated-line {
+		.animated-line__progress {
+			transform: scaleX(0);
+			transition: transform 1.2s;
+			transform-origin: left;
+		}
+
+		&.animation--complete {
+			.animated-line__progress {
+				transform: scaleX(1);
+			}
+		}
+	}
+
+	&.animated-header {
+		.animated-header__box {
+			display: inline-block;
+			overflow: hidden;
+		}
+
+		.animated-header__elem {
+			display: inline-block;
+			transform: translateY(100%);
+			transition: transform .7s;
+		}
+
+		&.animation--complete {
+			.animated-header__elem {
+				transform: translateY(0);
+			}
+		}
+	}
+
+	&.fade {
+		opacity: 0;
+		transition: opacity .7s linear;
+
+		&.animation--complete {
+			opacity: 1;
+		}
+	}
+}

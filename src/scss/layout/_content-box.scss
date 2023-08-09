@@ -1,0 +1,13 @@
+.content-box {
+	width: 100%;
+	max-width: 1200px;
+	margin-left: auto;
+
+	@include desktop() {
+		padding-left: 100px;
+	}
+
+	@media (min-width: 1400px) {
+		padding-left: 0;
+	}
+}

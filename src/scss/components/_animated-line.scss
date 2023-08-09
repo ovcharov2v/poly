@@ -1,0 +1,10 @@
+.animated-line {
+	&__progress {
+		width: 100%;
+		border-top: 1px solid var(--color-elements);
+
+		.animated-line--gray & {
+			border-color: $color-gray-medium;
+		}
+	}
+}

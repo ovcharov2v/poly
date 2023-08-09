@@ -1,0 +1,61 @@
+.partners {
+	padding-top: 49px;
+	padding-bottom: 49px;
+
+	@include desktop {
+		padding-top: 112px;
+	}
+
+	&__title {
+		@include text-31-light;
+		margin-bottom: 33px;
+
+		@include desktop {
+			@include h3-40-light;
+			margin-bottom: 50px;
+		}
+	}
+
+	&__grid {
+		@include tablet-desktop {
+			display: grid;
+			grid-auto-rows: 250px;
+			grid-gap: 50px 60px;
+		}
+		@include tablet {
+			grid-template:  250px / repeat(2,1fr);
+		}
+		@include desktop {
+			grid-template:  250px / repeat(3,1fr);
+		}
+	}
+
+	&__slider {
+		overflow: visible;
+	}
+
+	&__elem {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $color-gray-light;
+		padding: 15px 48px;
+		height: 150px;
+
+		@media (min-width: 768px) {
+			height: unset;
+		}
+
+		@include desktop {
+			padding: 25px 40px;
+		}
+
+		@media (min-width: 1300px) {
+			padding: 25px 80px;
+		}
+	}
+
+	&__img {
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,19 @@
+mixin contactsForm
+	// Section Contacts form
+	section.contacts-form.container
+		.content-box.contacts-form__row
+			.contacts-form__col.contacts-form__col--content
+				p.contacts-form__small-text.animation.fade Interested in a project?
+				h2.contacts-form__title.animation.fade Leave contact details for a call back
+				form.contacts-form__form.animation.fade(action="#")
+					input.input.contacts-form__input(type="text", placeholder="Name")
+					input.input.contacts-form__input(type="tel", placeholder="Telephone")
+					label.checkbox.contacts-form__checkbox
+						input.checkbox__input(type="checkbox")
+						span.checkbox__text I agree to the
+							|
+							|
+							a.checkbox__link(href="#") processing of personal data
+					+button("Send", "contacts-form__button")
+			.contacts-form__col.contacts-form__col--img
+				+picture("img7", "contacts-form__img scaled-block animation")
